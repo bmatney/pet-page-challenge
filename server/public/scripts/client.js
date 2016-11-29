@@ -53,8 +53,6 @@ app.controller('dogController', ['$http', function ($http) {
     };
 
     self.getRandomPet();
-
-    self.message = "Welcome!"
   },
 ]);
 
@@ -84,8 +82,6 @@ app.controller('catController', ['$http', function ($http) {
     };
 
     self.getRandomPet();
-
-    self.message = "Welcome!"
   },
 ]);
 
@@ -115,7 +111,5 @@ app.controller('smallFurryController', ['$http', function ($http) {
     };
 
     self.getRandomPet();
-
-    self.message = "Welcome!"
   },
 ]);

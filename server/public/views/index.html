@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script type="text/javascript" src="vendor/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/client.js"></script>
     <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <script type="text/javascript" src="/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
-  <body ng-app="app" ng-controller="firstController as fc">
-    <header class="jumbotron">
-      <h1 class="container">{{fc.message}} Angular Node Express Starter</h1>
-    </header>
-    <div class="container">
-      <div class="">
-        {{fc.animal.contact.phone.$t}}
-      </div>
-      <img ng-src="{{fc.animal.media.photos.photo[2].$t}}" />
-    </div>
+  <body ng-app="app">
+
+    <header ng-include src="'/views/templates/header.html'" class="jumbotron text-center"></header>
+
+    <div ng-include src="'/views/templates/nav.html'"></div>
+
+    <main ng-view></main>
+
   </body>
 </html>
